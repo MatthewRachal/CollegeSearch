@@ -1,0 +1,36 @@
+.specificViewContainer {
+    width: 80%;
+    max-width: 1000px;
+    margin: 2em auto auto auto;
+    box-shadow: 0 0 10px;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.schoolHeader {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    
+}
+
+h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.programDiv {
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    width: 80%;
+    margin: auto auto 1em auto;
+    border-top-color: var(--appDark1);
+    border-top-width: 5px;
+}
+
+@media screen and (max-width: 600px)
+{
+    .programDiv {
+        width: 100%;
+    }
+}

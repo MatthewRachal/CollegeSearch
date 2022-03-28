@@ -1,0 +1,46 @@
+export interface dataInterface {
+    0: string,
+    1: string,
+    2:string,
+    3: string,
+    4: string,
+    5: string,
+    6: string,
+    7: string,
+    8: string,
+    9: string,
+    10: string,
+    11: string,
+    12: string,
+    13: string,
+    14: string,
+    15: string,
+    16: string,
+    17: string,
+    18: string,
+}
+
+var carnegieData:any = {
+    0: '(Not classified)',
+    1: 'Two-year, very small',
+    2:'Two-year, small',
+    3: 'Two-year, medium',
+    4: 'Two-year, large',
+    5: 'Two-year, very large',
+    6: 'Four-year, very small, primarily nonresidential',
+    7: 'Four-year, very small, primarily residential',
+    8: 'Four-year, very small, highly residential',
+    9: 'Four-year, small, primarily nonresidential',
+    10: 'Four-year, small, primarily residential',
+    11: 'Four-year, small, highly residential',
+    12: 'Four-year, medium, primarily nonresidential',
+    13: 'Four-year, medium, primarily residential',
+    14: 'Four-year, medium, highly residential',
+    15: 'Four-year, large, primarily nonresidential',
+    16: 'Four-year, large, primarily residential',
+    17: 'Four-year, large, highly residential',
+    18: 'Exclusively graduate/professional',
+  }
+
+  export default carnegieData;
+

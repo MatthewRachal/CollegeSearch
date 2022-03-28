@@ -1,0 +1,116 @@
+/* School General CSS */
+
+.schoolDiv {
+    padding-bottom: 10em;
+}
+.schoolsTopDiv {
+    width: 80%;
+    margin: auto auto 2em auto;
+}
+.schoolsTopDiv p {
+    line-height: 15px;
+}
+
+/*School Table CSS */
+.schoolTableContainer {
+    overflow-x: auto;
+    overflow-y: auto;
+    margin: auto;
+    width: 80%;
+    min-width: 80%; 
+    max-width: 1200px;
+    height: 550px;
+}
+
+.schoolTableThead {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.schoolTable {
+    display: sticky;
+    table-layout: fixed;
+    margin: 0 0 0 0;
+    width: 99.9%;
+    min-width: 1000px;
+    text-align: center;
+    border-spacing: 0px 0px;
+    border-collapse: collapse;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    font-size: 0.9rem;    
+}
+
+.schoolTableContainer::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--appGrey1);
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--appDark1);
+    border-radius: 25px;
+}
+  
+.tableHeader {
+    background-color: var(--appDark1);
+    color: var(--appWhite1);
+}
+.tableHeaderTd {
+    padding: 0.25rem;
+    white-space: nowrap;  
+    overflow-y: hidden; 
+}
+
+.tableTr:hover {
+    cursor: pointer;
+    background-color: var(--appGrey1);
+}
+.tableTrColor {
+    background-color: rgb(237, 237, 250);
+  
+
+}
+.tableTrColor:hover {
+    cursor: pointer;
+    background-color: var(--appGrey1);
+}
+
+.tableTd {
+    border-width: 1px;
+    height: 60px;
+    overflow-x: hidden;
+}
+
+.iconSpan:hover  {
+    cursor: pointer;
+    color: var(--appColor1);
+    transition: 0.4s ease;
+}
+
+@media screen and (max-width: 600px)
+{
+    .schoolTableContainer {
+        width: 90%;
+        min-width: 90%; 
+        max-width: 500px;
+        height: 550px;
+        padding: 0;
+        margin: auto;
+        zoom: 0.75;
+    }
+
+    .schoolTable {
+        font-size: 0.75rem;
+        width: 99.9%;
+        min-width: 500px;
+    }
+}
