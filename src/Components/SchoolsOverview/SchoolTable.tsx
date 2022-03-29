@@ -20,7 +20,7 @@ type Props = {
     updateFilter: (filter:string,category:string,type:string) => void;
 }
 
-export default function SchoolTable(props: Props) {
+export default function SchoolTable(props: Props):JSX.Element {
 
     const navigate = useNavigate();
     const changeRoute = (name:string) => {
@@ -28,7 +28,7 @@ export default function SchoolTable(props: Props) {
     }
 
     //The table header categories to be displayed
-    let categories: string[] = ["INSTNM", "CITY", "STABBR", "ADM_RATE", "SAT_AVG", "INSTURL"]
+    const categories: string[] = ["INSTNM", "CITY", "STABBR", "ADM_RATE", "SAT_AVG", "INSTURL","distanceFromLocation"]
 
     const generateTableRows = ():JSX.Element[] => {
 
@@ -46,6 +46,8 @@ export default function SchoolTable(props: Props) {
                                     {item[category] === "NULL" ? "" 
                                     : category === "ADM_RATE" ? `${(parseFloat(item[category])*100).toFixed(1)}%` 
                                     : category === "SAT_AVG" ? parseFloat(item[category]).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") 
+                                    : category ===  "distanceFromLocation" && (isNaN(item[category]) === true || item[category] === 0) ? ""
+                                    : category === "distanceFromLocation" ? parseFloat(item[category].toFixed(1)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") 
                                     : item[category]}
                             </td>
                         )
@@ -108,6 +110,14 @@ export default function SchoolTable(props: Props) {
                         <div>
                             <span className="iconSpan"><FontAwesomeIcon onClick={e=>{e.preventDefault(); props.updateFilter("sortText","INSTURL","Ascending")}} style={{float: "left", fontSize: "1.25rem", marginLeft: "10%"}} icon={faCaretUp} /></span>
                             <span className="iconSpan"><FontAwesomeIcon onClick={e=>{e.preventDefault(); props.updateFilter("sortText","INSTURL","Descending")}} style={{float: "right", fontSize:"1.25rem", marginRight: "10%"}} icon={faCaretDown} /></span>
+                        </div>
+                    </td>
+                    <td className="tableHeaderTd">
+                    <FontAwesomeIcon style={{margin: "0 5px 0 5px", fontSize: "1.25rem"}} icon={faWifi} />
+                        Distance(km) 
+                        <div>
+                            <span className="iconSpan"></span>
+                            <span className="iconSpan"></span>
                         </div>
                     </td>
                 </tr>

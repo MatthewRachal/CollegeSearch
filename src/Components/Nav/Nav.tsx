@@ -2,9 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import "./Nav.css"
 
-type Props = {}
-
-export default function Nav(props: Props) {
+export default function Nav() {
   return (
     <div>
         <ul className="navUl">

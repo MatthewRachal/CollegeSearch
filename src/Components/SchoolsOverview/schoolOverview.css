@@ -96,6 +96,34 @@
     transition: 0.4s ease;
 }
 
+/*GeoLocation */
+
+.geoLocationForm {
+    width: 80%;
+    margin: auto auto 1em auto;
+}
+.geoLocationInput {
+    margin: 1em 5px 1em auto;
+}
+.geoLocationButton {
+    background-color: var(--appDark1);
+    color: var(--appWhite1);
+    border: none;
+    padding: 10px 15px;
+}
+.geoLocationButton:hover {
+    cursor: pointer;
+    background-color: var(--appColor1);
+    transition: 0.4s ease;
+}
+.geoLocationButton:disabled {
+    opacity: 0.6;
+}
+.geoLocationButton:disabled:hover {
+    cursor: default;
+    background-color: var(--appDark1);
+}
+
 @media screen and (max-width: 600px)
 {
     .schoolTableContainer {
