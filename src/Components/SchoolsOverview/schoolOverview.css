@@ -124,6 +124,12 @@
     background-color: var(--appDark1);
 }
 
+.geoLocationButtonContainer {
+    display: flex;
+}
+
+
+/*Media Queries */
 @media screen and (max-width: 600px)
 {
     .schoolTableContainer {
@@ -139,6 +145,6 @@
     .schoolTable {
         font-size: 0.75rem;
         width: 99.9%;
-        min-width: 500px;
+        min-width: 800px;
     }
 }

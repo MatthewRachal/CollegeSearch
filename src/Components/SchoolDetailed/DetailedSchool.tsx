@@ -10,7 +10,7 @@ import carnegieData from './Data/carnegieData';
 //Typescript Interfaces
 import { SchoolData } from '../SchoolsOverview/Schools'
 
-export default function DetailedSchool() {
+export default function DetailedSchool():JSX.Element {
   
   const [specificSchoolData, setSpecificSchoolData] = useState<SchoolData|undefined|any>(undefined)
   const [programs, setPrograms] = useState<string[]>([]);
@@ -94,8 +94,8 @@ export default function DetailedSchool() {
       {specificSchoolData !== undefined ?
       <div className="specificViewContainer">
         <h5 className="schoolHeader">{specificSchoolData.INSTNM}</h5>
-        <h5><strong>City</strong>: {specificSchoolData.CITY}</h5>
-        <h5><strong>State</strong>: {specificSchoolData.STABBR}</h5>
+        <h5><strong>City:</strong> {specificSchoolData.CITY}</h5>
+        <h5><strong>State:</strong> {specificSchoolData.STABBR}</h5>
         <h5><strong>Institution Location:</strong> {specificSchoolData.LOCALE !== "NULL" ? localeData[specificSchoolData.LOCALE] : "No Data Available" }</h5>
         <h5><strong>Website:</strong> {specificSchoolData.INSTURL}</h5>
         <h5><strong>Highest Degree Awarded:</strong> {specificSchoolData.HIGHDEG !== "NULL" ? degreeData[specificSchoolData.HIGHDEG] : "No Data Available" }</h5>

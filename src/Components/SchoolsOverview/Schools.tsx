@@ -45,11 +45,11 @@ export default function Schools():JSX.Element {
             return x * Math.PI / 180;
           }
            
-        let longitude1:number = location1[1];
         let latitude1:number = location1[0];
+        let longitude1:number = location1[1];
 
-        let longitude2:number = location2[1];
         let latitude2:number = location2[0];
+        let longitude2:number = location2[1];
 
         //This is an approximation representing the midpoint between the max and min of Earths radius since it is constantly changing.
         // the Earths radius varies from 6356.752 km at the poles to 6378.137 km at the equator
@@ -82,9 +82,9 @@ export default function Schools():JSX.Element {
         .then(response => response.json())
         .then(data => {
             let i:number = 0;
+            //For Geolocation calculations
             for(i=0;i<data.length;i++)
             {
-
                 data[i].distance = [parseFloat(data[i].LATITUDE),parseFloat(data[i].LONGITUDE)]
                 data[i].distanceFromLocation = 0;
             }
@@ -95,7 +95,7 @@ export default function Schools():JSX.Element {
         })
     },[])    
 
-    const updateFilter = (filter:string,category:string,type:string) => {
+    const updateFilter = (filter:string,category:string,type:string):void => {
 
         let filteredSchoolData:any = [...schoolData];
 
@@ -199,6 +199,7 @@ return (
             <h2>School Search:</h2>
             <p>Select the arrows below to sort the school info</p>
             <p>You can also click on a row in the table to navigate to a detailed view</p>
+            <p>To sort based off your geolocation, agree to allow for your location to be used, select getGeoLocation, and then select the filter by location button.</p>
         </div>
         <div>
             <GeoLocation 

@@ -47,7 +47,7 @@ export default function SchoolTable(props: Props):JSX.Element {
                                     : category === "ADM_RATE" ? `${(parseFloat(item[category])*100).toFixed(1)}%` 
                                     : category === "SAT_AVG" ? parseFloat(item[category]).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") 
                                     : category ===  "distanceFromLocation" && (isNaN(item[category]) === true || item[category] === 0) ? ""
-                                    : category === "distanceFromLocation" ? parseFloat(item[category].toFixed(1)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") 
+                                    : category === "distanceFromLocation" ? parseFloat(item[category].toFixed(1)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
                                     : item[category]}
                             </td>
                         )

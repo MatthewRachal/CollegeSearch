@@ -1,25 +1,3 @@
-export interface dataInterface {
-    0: string,
-    1: string,
-    2:string,
-    3: string,
-    4: string,
-    5: string,
-    6: string,
-    7: string,
-    8: string,
-    9: string,
-    10: string,
-    11: string,
-    12: string,
-    13: string,
-    14: string,
-    15: string,
-    16: string,
-    17: string,
-    18: string,
-}
-
 var carnegieData:any = {
     0: '(Not classified)',
     1: 'Two-year, very small',

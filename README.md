@@ -1,6 +1,30 @@
-# Getting Started with Create React App
+# College Search Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Read This First!
+
+This is my college search application that I created with the available time that I had. The application is purley a frontend application though a backend could have been added if I had more time.
+
+### How to Use
+
+You can view the schools from the provided dataset in the application via the table. Click the up and down arrows to sort based on various categories. Select a row in the table and you can navigate to a detailed view for the selected school. 
+
+### Fetch requests and a note about the code therin
+
+I created fetch requests to simulate requesting data from a backend. Since this is only a frontend application, the requests are instead made to the files provided for the excerise. Following these requests, there are a few calculations that are performed after the the data is fetched which is subsequently placed in state. 
+
+In an ideal world, these calculations would be performed on the backend. Namely, seen in the files Schools.tsx and DetailedSchool.tsx. For example in DetailedSchool.tsx, a calculation is performed to get the program data for a specific school. This could be done way easier by a backend which then would send that finalized data to the frontend. Because this is purely a frontend application, this is not the case and as a result calculations are performed after the data is fetched which results in code that is slightly less than ideal.
+
+Regardless, I thought I should point this out!
+
+### Geolocation
+
+The geolocation is calculated from the haversine formula. To filter by location closest to you, you need to agree to allow access to your location and selec the geolocation button. Aftewards, select filter by location to filter the results.
+
+Note the calculation is an approximation. This is due to the earth's radius varying from 6356.752 km  to 6378.137 km at the poles. As a result, depending on the number others use, values could be slightly different. After some checks however, my calculations seemed pretty close to results provided from NOAA latitude / longitude calculator.
+
+## Installation
+
+Clone the repository and navigate to the folder and run npm install to install package dependencies. You can then run the app with npm start
 
 ## Available Scripts
 
@@ -13,34 +37,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
